@@ -1,4 +1,4 @@
-<h1>Departments#index</h1>
+<h1>Department Store</h1>
 <% @departments.each do |department| %>
   <h2><%= department.name %></h2>
   <%= link_to 'Show Department', department_path(department) %>
@@ -9,4 +9,4 @@
 <% end %>
 
 <h1>Create New Department</h1>
-  <%= link_to 'New Department', new_department_path %>
+  <%= link_to 'Create New Department', new_department_path %>
