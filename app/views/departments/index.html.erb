@@ -1,2 +1,12 @@
 <h1>Departments#index</h1>
-<p>Find me in app/views/departments/index.html.erb</p>
+<% @departments.each do |department| %>
+  <h2><%= department.name %></h2>
+  <%= link_to 'Show Department', department_path(department) %>
+  <br>
+  <%= link_to 'Edit Department Name', edit_department_path(department) %>
+  <br>
+  <%= link_to 'Delete Department', department, method: :delete %>
+<% end %>
+
+<h1>Create New Department</h1>
+  <%= link_to 'New Department', new_department_path %>
