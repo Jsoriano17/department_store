@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
   end
 
   def new
@@ -37,7 +38,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
-    redirect_to department_topics_path(@department)
+    redirect_to department_items_path(@department)
   end
 
   private
