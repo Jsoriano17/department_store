@@ -32,6 +32,7 @@ class DepartmentsController < ApplicationController
   end
 
   def destroy
+    @department = Department.find(params[:id]).destroy
     redirect_to departments_path
   end
 
@@ -41,6 +42,6 @@ class DepartmentsController < ApplicationController
   end
 
   def set_department
-    @department = Department.find(params[:id]).destroy
+    @department = Department.find(params[:id])
   end
 end
